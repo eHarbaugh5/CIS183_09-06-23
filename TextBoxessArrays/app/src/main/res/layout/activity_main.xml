@@ -6,13 +6,55 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <Button
+        android:id="@+id/btn_v_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="107dp"
+        android:text="Add Place"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_v_errorNoResturaunt" />
+
+    <Button
+        android:id="@+id/btn_v_find"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="42dp"
+        android:text="Pick Place"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_v_add"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/tb_v_newResturaunt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="189dp"
+        android:ems="10"
+        android:hint="Enter Resturaunt Name"
+        android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/txt_v_resturaunt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_v_errorNoResturaunt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:text="Error Enter A resturaunt name"
+        android:textColor="#F44336"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/tb_v_newResturaunt"
+        app:layout_constraintTop_toBottomOf="@+id/tb_v_newResturaunt" />
 </androidx.constraintlayout.widget.ConstraintLayout>
